@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menghitung Luas Segitiga</title>
+		<script type="text/javascript">
+			function LuasSegitiga(){
+				alas = document.getElementById("txtAlas").value;
+				tinggi = document.getElementById("txtTinggi").value;
+				luas = 0.5 * alas * tinggi;
+				document.getElementById("txtLuasSegitiga").value = luas;
+			}
+		</script>
+	</head>
+	<body>
+		<form name='hitungLuasSegitiga' method='post'>
+			<b>Menghitung Luas Segitiga</b>
+			<table>
+				<tr>
+					<td>Alas Segitiga</td>
+					<td>:</td>
+					<td><input type='number' id="txtAlas" onchange='LuasSegitiga();'></td>
+				</tr>
+				<tr>
+					<td>Tinggi Segitiga</td>
+					<td>:</td>
+					<td><input type='number' id="txtTinggi" onchange='LuasSegitiga();'></td>
+				</tr>
+				<tr>
+					<td>Luas Segitiga</td>
+					<td>:</td>
+					<td> <input type='number' id="txtLuasSegitiga" onchange='LuasSegitiga();'></td>
+				</tr>
+			</table>
+		</form>
+		<input type="button" id="btnHitung" value="Hitung" onclick="LuasSegitiga();"><br/>
+	</body>
+</html>
